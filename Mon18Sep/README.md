@@ -139,9 +139,29 @@ while True:
     time.sleep(1)
 ```
 
-- Although i was really happy with the smooth transitions within each color, the transition between the different colors was still choppy. The only transition that was smooth was between orange and yellow and that was because they shared very little distinctions in terms of values. To remedy this, i created more intervals between transitions. here is the result:
+- Although i was really happy with the smooth transitions within each color, the transition between the different colors was still choppy. The only transition that was smooth was between orange and yellow and that was because they shared very little distinctions in terms of values. To remedy this, i created more intervals between transitions. here is the full code for the final result:
 
 ```
+# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+"""CircuitPython Essentials Internal RGB LED red, green, blue example"""
+import time
+import board
+
+if hasattr(board, "APA102_SCK"):
+    import adafruit_dotstar
+
+    led = adafruit_dotstar.DotStar(board.APA102_SCK, board.APA102_MOSI, 1)
+else:
+    import neopixel
+
+    led = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+led.brightness = 0.3
+
+while True:
     # Yellow to Blue
     led[0] = (255, 255, 0)
     time.sleep(1)
