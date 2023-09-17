@@ -9,7 +9,7 @@ the more evident.
 ### Step 2
 - to start, i knew i wanted to play around with the colors yellow, orange, blue, and purple only as these are the colors that come to mind when i
 think of a sunset or sunrise. So to begin, i simply put these color intervals into the code:
-'''
+''''''''''''''''''''''''''''''''''''''''''''''''
 # SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
 #
 # SPDX-License-Identifier: MIT
@@ -45,4 +45,4 @@ while True:
     # Orange
     led[0] = (255, 165, 0)
     time.sleep(1)
-'''
+''''''''''''''''''''''''''''''''''''''''''''''''
